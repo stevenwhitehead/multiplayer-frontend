@@ -14,7 +14,7 @@ let config = {
 let players = {}; 
 let gamestate;
 
-let Socket = new WebSocket("https://multiplayer-backend.cyxcl6xqlpy.ca-tor.codeengine.appdomain.cloud/game") // TODO
+let Socket = new WebSocket("wss://multiplayer-backend.cyxcl6xqlpy.ca-tor.codeengine.appdomain.cloud/game") // TODO
 
 Socket.onmessage = function (event) {
 	gamestate = JSON.parse(event.data);
